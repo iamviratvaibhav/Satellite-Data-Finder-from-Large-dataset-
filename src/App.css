@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.border-highlight {
+  border: 4px solid #7A0BC0; /* or any other color you prefer */
+}

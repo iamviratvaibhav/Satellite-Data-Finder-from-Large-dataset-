@@ -88,21 +88,23 @@ const Home = () => {
 };
 
     return (
-        <div className="p-6">
-            <h1 className="text-2xl font-bold mb-4">🛰️ Digantara Satellite Tracker</h1>
-            <SearchBar onSearch={setSearchQuery} />
+        <div className="p-6 min-h-screen flex flex-col justify-center py-12 px-4 relative bg-gray-900 text-white">
+            <h1 className="text-3xl font-bold mb-2 text-center text-purple-500">🛰️ Satellite Tracker</h1>
+            {/* <div className="w-75 h-1 bg-purple-500 mb-8"></div> */}
+            <SearchBar 
+            onSearch={setSearchQuery} />
             <Filters onApply={setFilters} />
             {!loading && !error && (
                 <div className="text-sm text-gray-700 mb-2">
                     Results: {resultCount} satellite{resultCount !== 1 ? 's' : ''} found
                 </div>
             )}
-            {loading && (
-            <div className="w-full my-4">
-              <div className="relative w-full h-2 bg-gray-200 rounded overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-full animate-loading-bar bg-blue-500"></div>
+            {loading && (  //loading bar
+            <div className="w-full my-4 fixed top-0 left-0 h-[70%] items-center justify-center" >
+              <div className="relative w-[50%] h-2 bg-gray-200 rounded overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-full animate-loading-bar bg-purple-500"></div>
               </div>
-              <p className="text-center text-blue-500 mt-2">Loading satellites...</p>
+              <p className="text-center text-purple-500 mt-2">Loading satellites...</p>
             </div>
           )}
 
@@ -112,7 +114,7 @@ const Home = () => {
             <div className="mt-4 flex items-center gap-4">
                 <span>Selected: {selected.length}</span>
                 <button
-                    className="bg-green-600 text-white px-4 py-2 rounded"
+                    className="bg-purple-600 text-white px-4 py-2 rounded"
                     onClick={handleProceed}
                 >
                     Proceed
@@ -123,7 +125,7 @@ const Home = () => {
           {!loading && !error && resultCount > itemsPerPage && (
   <div className="flex justify-center items-center gap-4 mt-4">
     <button
-      className="px-3 py-1 bg-gray-200 rounded disabled:opacity-50"
+      className="px-3 py-1 bg-purple-700 rounded disabled:opacity-50"
       onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
       disabled={currentPage === 1}
     >
@@ -131,7 +133,7 @@ const Home = () => {
     </button>
     <span>Page {currentPage} of {Math.ceil(resultCount / itemsPerPage)}</span>
     <button
-      className="px-3 py-1 bg-gray-200 rounded disabled:opacity-50"
+      className="px-3 py-1 bg-purple-800 rounded disabled:opacity-50"
       onClick={() =>
         setCurrentPage((p) => Math.min(p + 1, Math.ceil(resultCount / itemsPerPage)))
       }

@@ -53,8 +53,8 @@ const SatelliteTable = ({
             className={`px-3 py-1 rounded-md text-sm font-medium transition
               ${
                 sortKey === key
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+                  ? 'bg-purple-800 text-white'
+                  : 'bg-purple-400 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
               }`}
           >
             {key.charAt(0).toUpperCase() + key.slice(1)}
