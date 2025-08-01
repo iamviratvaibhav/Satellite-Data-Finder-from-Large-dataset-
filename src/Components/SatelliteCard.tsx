@@ -17,17 +17,13 @@ type Props = {
 
 const SatelliteCard = ({ satellite, isSelected, onSelect }: Props) => {
   return (
-    <motion.div  //card animation
+    <motion.div  
       whileTap={{ scale: 0.98 }}
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
       whileHover={{ scale: 1.02 }}
-      // className={`rounded-xl p-5 border border-purple-300 dark:border-gray-700 shadow-md cursor-pointer transition-colors duration-300 
-      //   ${isSelected 
-      //     ? 'bg-purple-200 dark:bg-purple-900 border-purple-300 dark:border-purple-600' 
-      //     : 'bg-white dark:bg-gray-800 border-purple-300 dark:border-gray-700'}
-      // `}
+
       className={`rounded-xl p-5 border border-purple-100 dark:border-gray-700 shadow-md cursor-pointer transition-colors duration-300 
         ${isSelected ? 'border-highlight' : ''}
         ${isSelected
@@ -43,7 +39,7 @@ const SatelliteCard = ({ satellite, isSelected, onSelect }: Props) => {
           checked={isSelected}
           onChange={onSelect}
           onClick={(e) => e.stopPropagation()}
-          // className="accent-purple-500 w-4 h-4 border-purple-700 dark:border-purple-500 focus:ring-purple-500 dark:focus:ring-purple-600 transition-colors duration-200"
+      
           className="accent-purple-500 w-6 h-6 border-purple-700 dark:border-purple-500 focus:ring-purple-500 dark:focus:ring-purple-600 transition-colors duration-200"
         />
       </div>
