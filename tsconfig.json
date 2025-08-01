@@ -9,13 +9,29 @@
 // }
 
 
+// {
+//   "compilerOptions": {
+//     "module": "ESNext",
+//     "moduleResolution": "Node",
+//     "target": "ESNext",
+//     "strict": true,
+//     "jsx": "react-jsx",
+//     "types": ["vite/client"]
+//   },
+//   "include": ["src"]
+// }
+
 {
   "compilerOptions": {
-    "module": "ESNext",
-    "moduleResolution": "Node",
     "target": "ESNext",
-    "strict": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
     "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
     "types": ["vite/client"]
   },
   "include": ["src"]
