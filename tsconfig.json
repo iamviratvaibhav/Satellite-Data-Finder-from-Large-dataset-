@@ -21,17 +21,51 @@
 //   "include": ["src"]
 // }
 
+// {
+//   "compilerOptions": {
+//     "target": "ESNext",
+//     "module": "ESNext",
+//     "moduleResolution": "node",
+//     "jsx": "react-jsx",
+//     "strict": true,
+//     "esModuleInterop": true,
+//     "allowSyntheticDefaultImports": true,
+//     "skipLibCheck": true,
+//     "forceConsistentCasingInFileNames": true,
+//     "types": ["vite/client"]
+//   },
+//   "include": ["src"]
+// }
+
+
+
+// {
+//   "compilerOptions": {
+//     "target": "ESNext",
+//     "module": "nodenext",                    
+//     "moduleResolution": "nodenext",
+//     "jsx": "react-jsx",
+//     "strict": true,
+//     "esModuleInterop": true,
+//     "allowSyntheticDefaultImports": true,
+//     "skipLibCheck": true,
+//     "forceConsistentCasingInFileNames": true,
+//     "types": ["vite/client"]
+//   },
+//   "include": ["src"]
+// }
+
+
+
 {
   "compilerOptions": {
-    "target": "ESNext",
     "module": "ESNext",
-    "moduleResolution": "node",
-    "jsx": "react-jsx",
+    "moduleResolution": "bundler", // ✅ Fix resolution issue
+    "target": "ESNext",
     "strict": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true, // ✅ Fix lodash import
+    "esModuleInterop": true,              // ✅ Fix goober export issue
     "types": ["vite/client"]
   },
   "include": ["src"]

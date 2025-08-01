@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import SatelliteCard from './SatelliteCard';
+import SatelliteCard from './SatelliteCard.js';
 
 type Satellite = {
   name: string;

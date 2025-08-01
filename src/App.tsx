@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { fetchSatellites } from "./utils/api";
+import { fetchSatellites } from "./utils/api.js";
 import {Routes, Route} from 'react-router-dom';
-import Home from "./pages/Home";
-import SelectedPage from "./pages/SelectedPage";
+import Home from "./pages/Home.js";
+import SelectedPage from "./pages/SelectedPage.js";
 function App() {
 
   const [satellites, setSatellites] = useState([]);
